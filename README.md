@@ -1,4 +1,4 @@
-<h1 align="center">Altis-Life</h1>
+<h1 align="center">Altis-Life SteelGamers</h1>
 <p align="center">
     <a href="https://github.com/ArmaLife/Altis">
         <img src="https://img.shields.io/badge/version-v4.4-green.svg" alt="Altis Life Version">
