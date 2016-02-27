@@ -22,6 +22,7 @@
 </p>
 
 <b> Le altis life ici présent est la pour être modifier afin de convenir au souhait de dévellopement de Goummix.<b>
+
 <b>Altis Life</b> or <b>[Altis Life RPG] (http://www.altisliferpg.com)</b> is developed by <b>Tonic</b> AKA <b>[TAW_Tonic] (https://github.com/TAWTonic)</b> modified by <b>[Goummix](http://steel-gamers.fr/members/goummix/)</b>.<br/>
 This contains primarily the release contain and on-going development changes to the mission.<br/>
 <br/>
