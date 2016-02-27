@@ -1,0 +1,193 @@
+author = "Crée par Tonic, Modifier par Goummix";
+loadScreen = "textures\armalife.jpg";
+joinUnassigned = 1;
+respawn = BASE;
+respawndelay = 30;
+disabledAI = 1;
+disableChannels[]={0,1,2};
+enableDebugConsole = 1;
+respawnDialog = 0;
+saving = 0;
+
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 60;
+};
+
+wreckLimit = 3;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 320;
+corpseLimit = 150;
+corpseRemovalMinTime = 999;
+corpseRemovalMaxTime = 9999;
+
+#include "Config_Spyglass.hpp"
+#include "CfgRemoteExec.hpp"
+#include "dialog\MasterHandler.hpp"
+#include "Config_Master.hpp"
+
+class RscTitles {
+	#include "dialog\progress.hpp"
+	#include "dialog\hud_nameTags.hpp"
+	#include "dialog\hud_stats.hpp"
+};
+
+class CfgFunctions {
+	#include "Functions.hpp"
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class SirenLong
+	{
+		name = "SirenLong";
+		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class medicSiren
+	{
+		name = "medicSiren";
+		sound[] = {"\sounds\medic_siren.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class tazersound
+	{
+		name = "Tazersound";
+		sound[] = {"\sounds\tazer.ogg", 0.25, 1};
+		titles[] = {};
+	};
+
+	class flashbang
+	{
+		name = "flashbang";
+		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class mining
+	{
+		name = "mining";
+		sound[] = {"\sounds\mining.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class harvest
+	{
+		name = "harvest";
+		sound[] = {"\sounds\harvest.ogg", 1.0, 1};
+		titles[] = {};
+	};
+};
+
+class CfgDebriefing
+{
+	class NotWhitelisted
+	{
+		title = "Echec";
+		subtitle = "Vous n'êtes pas whiteliste pour ce type de slot";
+		description = "Si le problème persiste, contactez un modérateur";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+
+	class Blacklisted
+	{
+		title = "Bannis";
+		subtitle = "Vous êtes bannis du serveur";
+		description = "Vous pouvez vous faire débanir en formulant une demande sur le Forum";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+
+	class SpyGlass
+	{
+		title = "Notre anticheat ta à l'oeil";
+		subTitle = "Ne fais pas le fou, sa ne vaut pas la peine";
+		description = "";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+};
+
+class CfgNotifications
+{
+	class MedicalRequestEmerg
+	{
+		title = "Demande d'un médecin !";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 10;
+		priority = 7;
+	};
+
+	class DeliveryAssigned
+	{
+		title = "Votre mission de livraison et une réussite";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 10;
+		priority = 7;
+	};
+
+	class DeliveryFailed
+	{
+		title = "Votre mission de livraison et un Echec";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
+		description = "%1";
+		duration = 7;
+		priority = 7;
+	};
+
+	class DeliverySucceeded
+	{
+		title = "Votre mission de livraison et une réussite";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
+		description = "%1";
+		duration = 6;
+		priority = 6;
+	};
+
+	class TextMessage
+	{
+		title = "Vous avez recu un nouveau message";
+		iconPicture = "icons\messagenew.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+
+	class PoliceDispatch
+	{
+		title = "Requete au centrale du 117";
+		iconPicture = "icons\messagepolice.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+
+	class AdminDispatch
+	{
+		title = "Message d'un administrateur";
+		iconPicture = "icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+
+	class AdminMessage
+	{
+		title = "Message d'un administrateur";
+		iconPicture = "icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 5;
+	};
+};
